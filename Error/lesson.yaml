@@ -1,0 +1,13 @@
+- Class: meta
+  Course: Demo
+  Lesson: Error
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: cmd_question
+  Output: Type lm(y~x).
+  CorrectAnswer: lm(y~x)
+  AnswerTests: omnitest(correctExpr='lm(y~x)', correctVal=lm(y~x))
+  Hint: Just type lm(y~x).
