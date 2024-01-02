@@ -7,7 +7,7 @@
   Version: 2.4.5
 
 - Class: cmd_question
-  Output: Type lm(y~x).
+  Output: Please type lm(y~x).
   CorrectAnswer: lm(y~x)
   AnswerTests: omnitestfix(correctExpr='lm(y~x)', correctVal=lm(y~x))
   Hint: Just type lm(y~x).
