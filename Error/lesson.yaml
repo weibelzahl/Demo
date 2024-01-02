@@ -9,5 +9,5 @@
 - Class: cmd_question
   Output: Type lm(y~x).
   CorrectAnswer: lm(y~x)
-  AnswerTests: omnitest2(correctExpr='lm(y~x)', correctVal=lm(y~x))
+  AnswerTests: omnitestfix(correctExpr='lm(y~x)', correctVal=lm(y~x))
   Hint: Just type lm(y~x).

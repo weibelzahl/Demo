@@ -11,7 +11,7 @@
       # can be used for for the purpose, but it also re-evaluates the
       # expression which the user entered, so care must be taken.
 
-omnitest2 <- function(correctExpr=NULL, correctVal=NULL, strict=FALSE, eval_for_class=as.logical(NA)){
+omnitestfix <- function(correctExpr=NULL, correctVal=NULL, strict=FALSE, eval_for_class=as.logical(NA)){
   e <- get("e", parent.frame())
   # Trivial case
   if(is.null(correctExpr) && is.null(correctVal))return(TRUE)
@@ -54,7 +54,7 @@ omnitest2 <- function(correctExpr=NULL, correctVal=NULL, strict=FALSE, eval_for_
       if(is(e, "dev") && !valResults$passed)swirl_out(valResults$message)
       valGood <- valResults$passed
       # valGood <- val_matches(correctVal)
-    } else if(length(e$val) == 1 && !is.na(e$val) && is.numeric(e$val) && length(e$val) == 1){
+    } else if(length(e$val) == 1 && !is.na(e$val) && is.numeric(e$val)){
       cval <- try(as.numeric(correctVal), silent=TRUE)
       valResults <- expectThat(e$val, 
                                equals_legacy(cval, label=correctVal),
